@@ -1,0 +1,1 @@
+include requirements.txt core.cu binding.cpp
