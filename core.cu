@@ -204,6 +204,6 @@ std::tuple<torch::Tensor, torch::Tensor> run_align(
     default:
         break;
     }
-    auto lens = slicesize.sum(1);
+    auto lens = slicesize.sum(1, false, torch::kInt32);
     return std::make_tuple(indices, lens);
 }
