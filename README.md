@@ -7,8 +7,8 @@ To understand the function of this module, you must acknowledge the **CTC** firs
 
 I recently ran into a problem that required to cast sequences with CTC alignment. The process of the algorithm is straight-forward and simple:
 
-1. Remove all consecutive symbols;
-2. Remove all blank symbols (commonly we use index `0` to identify that).
+1. Squeeze consecutive repetitive symbols to one: `1 1 1 2 2 3 3 3 3 -> 1 2 3`;
+2. Remove all blank symbols (commonly we use index `0` to identify that): `1 0 2 0 0 3 -> 1 2 3`.
 
 e.g. `1 0 1 2 2 0 0 3 0 4 -> 1 1 2 3 4`
 
