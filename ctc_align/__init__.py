@@ -8,8 +8,8 @@ CTC alignment means removing all consecutive symbols and zeros (blank symbols)
     from the source sequences. e.g.
     [0, 1, 1, 0, 1, 2, 2, 0, 0, 3] -> [1, 1, 2, 3]
 """
-import ctc_align._C as core
 import torch
+import ctc_align._C as core
 from pkg_resources import get_distribution
 from typing import *
 
